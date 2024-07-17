@@ -85,7 +85,7 @@ def calibrate(out_dir = None, extinction_file_path = None):
     #Write spectrum to an ascii file
     df_frame = {'wave':wavelength, 'optflux':optflux,  'sumflux':sumflux, 'skyflux':skyflux, 'fluxnoise':noiseflux}
     df = pd.DataFrame(df_frame,dtype='float32')
-    df.to_csv(out_dir +'flux_obj.ms_1d.dat', header=None, index=None, sep=' ')
+    df.to_csv(out_dir +'/flux_obj.ms_1d.dat', header=None, index=None, sep=' ')
 
     #Write the fits-file
     rightnow = datetime.now().strftime("%a %Y-%m-%dT%H:%M:%S")
@@ -99,7 +99,7 @@ def calibrate(out_dir = None, extinction_file_path = None):
     hduout.header.extend(hdrcopy, strip=True, update=True,
             update_first=False, useblanks=True, bottom=False)
 
-    hduout.writeto(out_dir +'flux_obj.ms_1d.fits', overwrite=True)
+    hduout.writeto(out_dir +'/flux_obj.ms_1d.fits', overwrite=True)
     print(" ")
     print("** Wrote output file 'flux_obj.ms_1d.fits' .")
     print(" ")
