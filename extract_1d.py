@@ -34,6 +34,7 @@ import os
 from utils import gaussweight, fake_multispec_data
 
 def extract_1d_spec(
+        standard_star = False,
         out_dir = ".",
         # Parameters for identify
         FITTING_MODEL_ID = 'Chebyshev',
@@ -60,8 +61,7 @@ def extract_1d_spec(
         ITERS_APSKY = 5,
         ORDER_APSKY = 2,
         # Dispersion axis
-        DISPAXIS = 1,
-        standard_star = False):
+        DISPAXIS = 1):
     
     # =============================================================================
     # Setting up
