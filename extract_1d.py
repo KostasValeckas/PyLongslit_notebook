@@ -35,6 +35,7 @@ from utils import gaussweight, fake_multispec_data
 
 def extract_1d_spec(
         standard_star = False,
+        pixel_table_path = None,
         out_dir = ".",
         # Parameters for identify
         FITTING_MODEL_ID = 'Chebyshev',
@@ -141,7 +142,7 @@ def extract_1d_spec(
 
     # Read idarc 
     try:
-        data = np.loadtxt(out_dir+'/idarc.dat')
+        data = np.loadtxt(pixel_table_path)
         pixnumber = data[:,0]
         wavelength = data[:,1]
     except IOError:
