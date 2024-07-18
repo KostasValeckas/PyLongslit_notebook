@@ -1,8 +1,16 @@
-# PyLongslit
+# PyLongslit notebook version
 
-# UNDER (RE)CONSTRUCTION
+# UNDER CONSTRUCTION
 
-PLEASE SEE THE DOCS AT: 
+# To get started:
+
+
+1. Download the whole repository. 
+2. Open the `PyLongslit_notebook.ipynb` and follow the instructions in 
+the notebook.
+
+-----------
+
 
 https://kostasvaleckas.github.io/PyLongslit/
 
