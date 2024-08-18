@@ -70,7 +70,7 @@ def reduce_obs(xsize,
 
     for n in range(0, n_rawimages):
             sub = fits.open(out_dir + "/" + outnames[n])
-            sum = sub[0].data
+            sum += sub[0].data
 
 
     rot = np.rot90(sum, k=3)
